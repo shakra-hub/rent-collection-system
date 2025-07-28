@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Residential Rent Collection System</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Residential Rent Collection System</h1>
+
+  <section class="container">
+    <div class="form-section">
+      <h2>Add Tenant</h2>
+      <form id="tenantForm">
+        <input type="text" id="tenantName" placeholder="Tenant Name" required />
+        <input type="text" id="unitNumber" placeholder="Unit Number" required />
+        <input type="number" id="monthlyRent" placeholder="Monthly Rent" required />
+        <input type="text" id="contact" placeholder="Contact" required />
+        <button type="submit">Add Tenant</button>
+      </form>
+    </div>
+
+    <div class="list-section">
+      <h2>Tenant List</h2>
+      <table id="tenantTable">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Unit</th>
+            <th>Rent</th>
+            <th>Status</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="container">
+    <div class="payment-section">
+      <h2>Record Payment</h2>
+      <form id="paymentForm">
+        <select id="tenantSelect"></select>
+        <input type="number" id="paymentAmount" placeholder="Amount Paid" required />
+        <input type="date" id="paymentDate" required />
+        <button type="submit">Record Payment</button>
+      </form>
+    </div>
+
+    <div class="report-section">
+      <h2>Summary Report</h2>
+      <p>Total Rent Collected: <span id="totalCollected">0</span></p>
+      <p>Total Outstanding: <span id="totalOutstanding">0</span></p>
+    </div>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
